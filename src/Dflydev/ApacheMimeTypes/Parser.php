@@ -25,7 +25,7 @@ class Parser
      *
      * @return array
      */
-    public static function parse($filename)
+    public function parse($filename)
     {
         $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $map = array();

@@ -73,14 +73,26 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('ddevamt', $extensions[1]);
     }
 
-    public function testDump()
+    public function testDumpTypeToExtensions()
     {
         $repository = $this->createRepository();
 
-        $dump = $repository->dump();
+        $dump = $repository->dumpTypeToExtensions();
 
         $this->assertCount(2, array_keys($dump));
         $this->assertArrayHasKey('dflydev/apache-mime-types', $dump);
         $this->assertArrayHasKey('dflydev/yet-another-mime-type', $dump);
+    }
+
+    public function testDumpExtensionToType()
+    {
+        $repository = $this->createRepository();
+
+        $dump = $repository->dumpExtensionToType();
+
+        $this->assertCount(3, array_keys($dump));
+        $this->assertEquals('dflydev/apache-mime-types', $dump['dflydevamt']);
+        $this->assertEquals('dflydev/apache-mime-types', $dump['ddevamt']);
+        $this->assertEquals('dflydev/yet-another-mime-type', $dump['dflydevyamt']);
     }
 }

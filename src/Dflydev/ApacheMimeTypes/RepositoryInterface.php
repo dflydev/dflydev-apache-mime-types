@@ -19,11 +19,18 @@ namespace Dflydev\ApacheMimeTypes;
 interface RepositoryInterface
 {
     /**
-     * Dump extension to content type map
+     * Dump extension to type map
      *
      * @return array
      */
-    public function dump();
+    public function dumpExtensionToType();
+
+    /**
+     * Dump type to extensions map
+     *
+     * @return array
+     */
+    public function dumpTypeToExtensions();
 
     /**
      * Find all extensions for a type

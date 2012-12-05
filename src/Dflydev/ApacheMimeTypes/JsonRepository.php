@@ -20,6 +20,8 @@ namespace Dflydev\ApacheMimeTypes;
  */
 class JsonRepository extends AbstractRepository
 {
+    protected $filename;
+
     /**
      * Constructor
      *
@@ -31,6 +33,11 @@ class JsonRepository extends AbstractRepository
             $filename = __DIR__.'/Resources/mime.types.json';
         }
 
-        $this->setFromMap(json_decode(file_get_contents($filename), true));
+        $this->filename = $filename;
+    }
+
+    protected function internalInit()
+    {
+        $this->setFromMap(json_decode(file_get_contents($this->filename), true));
     }
 }

@@ -20,6 +20,8 @@ namespace Dflydev\ApacheMimeTypes;
  */
 class FlatRepository extends AbstractRepository
 {
+    protected $filename;
+
     /**
      * Constructor
      *
@@ -31,6 +33,13 @@ class FlatRepository extends AbstractRepository
             $filename = __DIR__.'/Resources/mime.types';
         }
 
-        $this->setFromMap(Parser::parse($filename));
+        $this->filename = $filename;
+    }
+
+    protected function internalInit()
+    {
+        $parser = new Parser;
+
+        $this->setFromMap($parser->parse($this->filename));
     }
 }

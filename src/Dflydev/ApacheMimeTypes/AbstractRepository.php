@@ -20,9 +20,24 @@ abstract class AbstractRepository implements RepositoryInterface
 {
     protected $typeToExtensions;
     protected $extensionToType;
+    private $isInitialized = false;
+
+    protected function init()
+    {
+        if (true === $this->isInitialized) {
+            return;
+        }
+
+        $this->internalInit();
+
+        $this->isInitialized = true;
+    }
 
     /**
      * Set from map
+     *
+     * Convenience method supplied in order to make it easier for subclasses
+     * to set data from a type => extensions array mapping.
      *
      * @param array $map
      */
@@ -43,9 +58,21 @@ abstract class AbstractRepository implements RepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function dump()
+    public function dumpTypeToExtensions()
     {
+        $this->init();
+
         return $this->typeToExtensions;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function dumpExtensionToType()
+    {
+        $this->init();
+
+        return $this->extensionToType;
     }
 
     /**
@@ -53,6 +80,8 @@ abstract class AbstractRepository implements RepositoryInterface
      */
     public function findExtensions($type)
     {
+        $this->init();
+
         if (isset($this->typeToExtensions[$type])) {
             return $this->typeToExtensions[$type];
         }
@@ -65,10 +94,20 @@ abstract class AbstractRepository implements RepositoryInterface
      */
     public function findType($extension)
     {
+        $this->init();
+
         if (isset($this->extensionToType[$extension])) {
             return $this->extensionToType[$extension];
         }
 
         return null;
     }
+
+    /**
+     * Internal initialization
+     *
+     * Subclasses should extend this in order to execute code exactly
+     * once to initialize the repository.
+     */
+    abstract protected function internalInit();
 }
