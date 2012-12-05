@@ -20,7 +20,9 @@ class ParserTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->map = Parser::parse(__DIR__.'/../../../src/Dflydev/ApacheMimeTypes/Resources/mime.types');
+        $parser = new Parser;
+
+        $this->map = $parser->parse(__DIR__.'/../../../src/Dflydev/ApacheMimeTypes/Resources/mime.types');
     }
 
     public function testCss()
