@@ -28,6 +28,29 @@ Through [Composer][3] as [dflydev/apache-mime-types][4].
 Usage
 -----
 
+### Parser
+
+Parses Apache MIME Types in the format of `mime.types` [found here][1].
+
+```php
+<?php
+$parser = new Dflydev\ApacheMimeTypes\Parser;
+
+$map = $parser->parse('/path/to/mime.types');
+```
+
+### JsonRepository
+
+A repository backed by a JSON map of type to extensions.
+
+```json
+{
+    "text/html": ["html", "htm"]
+}
+```
+
+To use the embedded JSON:
+
 ```php
 <?php
 $repository = new Dflydev\ApacheMimeTypes\JsonRepository;
@@ -49,6 +72,48 @@ vardump($extensions);
 //   string(3) "htm"
 // }
 //
+```
+
+To specify a specific JSON mapping:
+
+```php
+<?php
+$repository = new Dflydev\ApacheMimeTypes\JsonRepository('/path/to/mime.types.json');
+```
+
+### FlatRepository
+
+A repository backed by Apache MIME Types formatted `mime.types`. To use the embedded
+`mime.types`:
+
+```php
+<?php
+$repository = new Dflydev\ApacheMimeTypes\FlatRepository;
+
+$type = $repository->findType('html');
+$extensions = $repository->findExtensions('text/html');
+
+vardump($type);
+vardump($extensions);
+
+//
+// Result
+//
+// string(9) "text/html"
+// array(2) {
+//   [0]=>
+//   string(4) "html"
+//   [1]=>
+//   string(3) "htm"
+// }
+//
+```
+
+To specify a specific `mime.types` mapping:
+
+```php
+<?php
+$repository = new Dflydev\ApacheMimeTypes\FlatRepository('/path/to/mime.types');
 ```
 
 
