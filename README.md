@@ -39,6 +39,34 @@ $parser = new Dflydev\ApacheMimeTypes\Parser;
 $map = $parser->parse('/path/to/mime.types');
 ```
 
+### PhpRepository
+
+A repository backed by static PHP arrays.
+
+```php
+<?php
+$repository = new Dflydev\ApacheMimeTypes\PhpRepository;
+
+$type = $repository->findType('html');
+$extensions = $repository->findExtensions('text/html');
+
+var_dump($type);
+var_dump($extensions);
+
+//
+// Result
+//
+// string(9) "text/html"
+// array(2) {
+//   [0]=>
+//   string(4) "html"
+//   [1]=>
+//   string(3) "htm"
+// }
+//
+```
+
+
 ### JsonRepository
 
 A repository backed by a JSON map of type to extensions.
