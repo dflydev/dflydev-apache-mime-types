@@ -54,9 +54,31 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($repository->findType('shouldnotexist'));
     }
 
+    public function testDefaultDumpTypeToExtensions()
+    {
+        $repository = $this->createDefaultRepository();
+
+        $dump = $repository->dumpTypeToExtensions();
+
+        $this->assertCount(765, array_keys($dump));
+    }
+
+    public function testDefaultDumpExtensionToType()
+    {
+        $repository = $this->createDefaultRepository();
+
+        $dump = $repository->dumpExtensionToType();
+
+        $this->assertCount(981, array_keys($dump));
+    }
+
     public function testMissing()
     {
         $repository = $this->createRepository();
+
+        if (null === $repository) {
+            return;
+        }
 
         $this->assertTrue(is_array($repository->findExtensions('foobar/missing')));
         $this->assertEmpty($repository->findExtensions('foobar/missing'));
@@ -66,6 +88,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     public function testFabricated()
     {
         $repository = $this->createRepository();
+
+        if (null === $repository) {
+            return;
+        }
 
         $extensions = $repository->findExtensions('dflydev/apache-mime-types');
         $this->count(2, $extensions);
@@ -77,6 +103,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     {
         $repository = $this->createRepository();
 
+        if (null === $repository) {
+            return;
+        }
+
         $dump = $repository->dumpTypeToExtensions();
 
         $this->assertCount(2, array_keys($dump));
@@ -87,6 +117,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     public function testDumpExtensionToType()
     {
         $repository = $this->createRepository();
+
+        if (null === $repository) {
+            return;
+        }
 
         $dump = $repository->dumpExtensionToType();
 

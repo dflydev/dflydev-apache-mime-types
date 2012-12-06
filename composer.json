@@ -18,6 +18,9 @@
     "require": {
         "php": ">=5.3"
     },
+    "require-dev": {
+        "twig/twig": "1.*"
+    },
     "autoload": {
         "psr-0": {
             "Dflydev\\ApacheMimeTypes": "src"
