@@ -86,8 +86,8 @@ $repository = new Dflydev\ApacheMimeTypes\JsonRepository;
 $type = $repository->findType('html');
 $extensions = $repository->findExtensions('text/html');
 
-vardump($type);
-vardump($extensions);
+var_dump($type);
+var_dump($extensions);
 
 //
 // Result
@@ -121,8 +121,8 @@ $repository = new Dflydev\ApacheMimeTypes\FlatRepository;
 $type = $repository->findType('html');
 $extensions = $repository->findExtensions('text/html');
 
-vardump($type);
-vardump($extensions);
+var_dump($type);
+var_dump($extensions);
 
 //
 // Result
