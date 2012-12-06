@@ -11,11 +11,11 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-#if (!class_exists('Twig_Environment', false)) {
-#    echo 'You must set up the project dev dependencies, run the following commands:'.PHP_EOL.
-#        'php composer.phar install --dev'.PHP_EOL;
-#    exit(1);
-#}
+if (!class_exists('Twig_Environment')) {
+    echo 'You must set up the project dev dependencies, run the following commands:'.PHP_EOL.
+        'php composer.phar install --dev'.PHP_EOL;
+    exit(1);
+}
 
 $repository = new Dflydev\ApacheMimeTypes\FlatRepository;
 
