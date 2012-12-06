@@ -31,8 +31,6 @@ Usage
 ### Parser
 
 Parses Apache MIME Types in the format of `mime.types` [found here][1].
-The return value from `parse` is an array mapping types to an array of
-extensions.
 
 ```php
 <?php
@@ -40,6 +38,17 @@ $parser = new Dflydev\ApacheMimeTypes\Parser;
 
 $map = $parser->parse('/path/to/mime.types');
 ```
+
+The return value from `parse` is an array mapping types to an array of
+extensions.
+
+```php
+<?php
+array(
+    'text/html' => array('html', 'htm'),
+);
+```
+
 
 ### PhpRepository
 
