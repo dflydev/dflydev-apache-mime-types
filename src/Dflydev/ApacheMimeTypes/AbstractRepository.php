@@ -33,6 +33,11 @@ abstract class AbstractRepository implements RepositoryInterface
         $this->isInitialized = true;
     }
 
+    protected function reset()
+    {
+        $this->isInitialized = false;
+    }
+
     /**
      * Set from map
      *

@@ -25,6 +25,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     {
         $repository = $this->createDefaultRepository();
 
+        if (null === $repository) {
+            return;
+        }
+
         $this->assertEquals('text/css', $repository->findType('css'));
 
         $extensions = $repository->findExtensions('text/css');
@@ -35,6 +39,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     public function testDefaultHtml()
     {
         $repository = $this->createDefaultRepository();
+
+        if (null === $repository) {
+            return;
+        }
 
         $this->assertEquals('text/html', $repository->findType('html'));
         $this->assertEquals('text/html', $repository->findType('htm'));
@@ -49,6 +57,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     {
         $repository = $this->createDefaultRepository();
 
+        if (null === $repository) {
+            return;
+        }
+
         $this->assertTrue(is_array($repository->findExtensions('foobar/missing')));
         $this->assertEmpty($repository->findExtensions('foobar/missing'));
         $this->assertNull($repository->findType('shouldnotexist'));
@@ -58,6 +70,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     {
         $repository = $this->createDefaultRepository();
 
+        if (null === $repository) {
+            return;
+        }
+
         $dump = $repository->dumpTypeToExtensions();
 
         $this->assertCount(765, array_keys($dump));
@@ -66,6 +82,10 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     public function testDefaultDumpExtensionToType()
     {
         $repository = $this->createDefaultRepository();
+
+        if (null === $repository) {
+            return;
+        }
 
         $dump = $repository->dumpExtensionToType();
 
