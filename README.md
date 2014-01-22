@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dflydev/dflydev-apache-mime-types.png?branch=master)](https://travis-ci.org/dflydev/dflydev-apache-mime-types)
+
 Apache MIME Types
 =================
 
