@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/dflydev/dflydev-apache-mime-types.png?branch=master)](https://travis-ci.org/dflydev/dflydev-apache-mime-types)
-
 Apache MIME Types
 =================
 
 Parses Apache MIME Types files and provides a simple interface to find
 extensions by type and type by extension.
+
+[![Build Status](https://travis-ci.org/dflydev/dflydev-apache-mime-types.png?branch=master)](https://travis-ci.org/dflydev/dflydev-apache-mime-types)
 
 
 Features
