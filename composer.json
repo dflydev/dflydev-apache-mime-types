@@ -19,7 +19,8 @@
         "php": ">=5.3"
     },
     "require-dev": {
-        "twig/twig": "1.*"
+        "twig/twig": "1.*",
+        "phpunit/phpunit": "^7.4"
     },
     "autoload": {
         "psr-0": {
