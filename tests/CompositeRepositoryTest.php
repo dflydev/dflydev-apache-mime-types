@@ -22,7 +22,7 @@ use Dflydev\ApacheMimeTypes\CompositeRepository;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class CompositeRepositoryTest extends AbstractRepositoryTest
+class CompositeRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {

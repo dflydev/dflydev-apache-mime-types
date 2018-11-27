@@ -18,7 +18,7 @@ use Dflydev\ApacheMimeTypes\ArrayRepository;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class ArrayRepositoryTest extends AbstractRepositoryTest
+class ArrayRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {

@@ -18,7 +18,7 @@ use Dflydev\ApacheMimeTypes\FlatRepository;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class FlatRepositoryTest extends AbstractRepositoryTest
+class FlatRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {

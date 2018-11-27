@@ -18,7 +18,7 @@ use Dflydev\ApacheMimeTypes\JsonRepository;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class JsonRepositoryTest extends AbstractRepositoryTest
+class JsonRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {

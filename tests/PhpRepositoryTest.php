@@ -18,7 +18,7 @@ use Dflydev\ApacheMimeTypes\PhpRepository;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class PhpRepositoryTest extends AbstractRepositoryTest
+class PhpRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {
