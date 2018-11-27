@@ -18,7 +18,7 @@ use Dflydev\ApacheMimeTypes\Parser;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class ParserTest extends \PHPUnit_Framework_TestCase
+class ParserTest extends \PHPUnit\Framework\TestCase
 {
     public function setUp()
     {

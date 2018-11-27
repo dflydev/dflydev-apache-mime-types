@@ -16,7 +16,7 @@ namespace Dflydev\ApacheMimeTypes\Test;
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractRepositoryTest extends \PHPUnit\Framework\TestCase
 {
     abstract protected function createDefaultRepository();
     abstract protected function createRepository();
