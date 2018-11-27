@@ -26,6 +26,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createDefaultRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -41,6 +42,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createDefaultRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -58,6 +60,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createDefaultRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -71,6 +74,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createDefaultRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -84,6 +88,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createDefaultRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -97,6 +102,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -110,6 +116,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -124,6 +131,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
@@ -139,6 +147,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
         $repository = $this->createRepository();
 
         if (null === $repository) {
+            $this->assertTrue(true);
             return;
         }
 
