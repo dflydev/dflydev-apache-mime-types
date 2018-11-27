@@ -80,7 +80,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
 
         $dump = $repository->dumpTypeToExtensions();
 
-        $this->assertCount(765, array_keys($dump));
+        $this->assertCount(766, array_keys($dump));
     }
 
     public function testDefaultDumpExtensionToType()
@@ -94,7 +94,7 @@ abstract class AbstractRepositoryTestCase extends \PHPUnit\Framework\TestCase
 
         $dump = $repository->dumpExtensionToType();
 
-        $this->assertCount(981, array_keys($dump));
+        $this->assertCount(988, array_keys($dump));
     }
 
     public function testMissing()
