@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
 
 /**
  * Flat Repository Test

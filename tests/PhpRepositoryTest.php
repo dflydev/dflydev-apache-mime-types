@@ -9,22 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\PhpRepository;
 
 /**
  * JSON Repository Test
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class JsonRepositoryTest extends AbstractRepositoryTest
+class PhpRepositoryTest extends AbstractRepositoryTest
 {
     protected function createDefaultRepository()
     {
-        return new JsonRepository;
+        return new PhpRepository;
     }
 
     protected function createRepository()
     {
-        return new JsonRepository(__DIR__.'/Fixtures/mime.types.json');
+        return null;
     }
 }

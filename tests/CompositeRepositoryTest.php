@@ -9,7 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\PhpRepository;
+use Dflydev\ApacheMimeTypes\JsonRepository;
+use Dflydev\ApacheMimeTypes\FlatRepository;
+use Dflydev\ApacheMimeTypes\ArrayRepository;
+use Dflydev\ApacheMimeTypes\CompositeRepository;
 
 /**
  * Composite Repository Test
