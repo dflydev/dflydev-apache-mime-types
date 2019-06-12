@@ -1791,6 +1791,7 @@ class PhpRepository implements RepositoryInterface
      */
     public function findExtensions($type)
     {
+        $type = strtolower($type);
         if (isset($this->typeToExtensions[$type])) {
             return $this->typeToExtensions[$type];
         }
@@ -1803,6 +1804,7 @@ class PhpRepository implements RepositoryInterface
      */
     public function findType($extension)
     {
+        $extension = strtolower($extension);
         if (isset($this->extensionToType[$extension])) {
             return $this->extensionToType[$extension];
         }
