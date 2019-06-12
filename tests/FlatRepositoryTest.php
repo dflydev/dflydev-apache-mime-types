@@ -9,14 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\FlatRepository;
 
 /**
  * Flat Repository Test
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class FlatRepositoryTest extends AbstractRepositoryTest
+class FlatRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {
@@ -25,6 +27,6 @@ class FlatRepositoryTest extends AbstractRepositoryTest
 
     protected function createRepository()
     {
-        return new FlatRepository(__DIR__.'/Fixtures/mime.types');
+        return new FlatRepository(__DIR__.'/fixtures/mime.types');
     }
 }

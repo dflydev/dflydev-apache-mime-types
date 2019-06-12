@@ -9,14 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\PhpRepository;
+use Dflydev\ApacheMimeTypes\JsonRepository;
+use Dflydev\ApacheMimeTypes\FlatRepository;
+use Dflydev\ApacheMimeTypes\ArrayRepository;
+use Dflydev\ApacheMimeTypes\CompositeRepository;
 
 /**
  * Composite Repository Test
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class CompositeRepositoryTest extends AbstractRepositoryTest
+class CompositeRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {

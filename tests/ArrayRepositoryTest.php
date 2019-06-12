@@ -9,22 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\ArrayRepository;
 
 /**
- * JSON Repository Test
+ * Array Repository Test
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class JsonRepositoryTest extends AbstractRepositoryTest
+class ArrayRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {
-        return new JsonRepository;
+        return null;
     }
 
     protected function createRepository()
     {
-        return new JsonRepository(__DIR__.'/Fixtures/mime.types.json');
+        return new ArrayRepository(array(
+            'dflydev/apache-mime-types' => array('dflydevamt', 'ddevamt'),
+            'dflydev/yet-another-mime-type' => array('dflydevyamt'),
+        ));
     }
 }

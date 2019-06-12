@@ -9,14 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\PhpRepository;
 
 /**
  * JSON Repository Test
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class PhpRepositoryTest extends AbstractRepositoryTest
+class PhpRepositoryTest extends AbstractRepositoryTestCase
 {
     protected function createDefaultRepository()
     {

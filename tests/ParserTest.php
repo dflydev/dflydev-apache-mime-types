@@ -9,20 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace Dflydev\ApacheMimeTypes;
+namespace Dflydev\ApacheMimeTypes\Test;
+
+use Dflydev\ApacheMimeTypes\Parser;
 
 /**
  * Parser Test
  *
  * @author Beau Simensen <beau@dflydev.com>
  */
-class ParserTest extends \PHPUnit_Framework_TestCase
+class ParserTest extends \PHPUnit\Framework\TestCase
 {
     public function setUp()
     {
         $parser = new Parser;
 
-        $this->map = $parser->parse(__DIR__.'/../../../src/Dflydev/ApacheMimeTypes/Resources/mime.types');
+        $this->map = $parser->parse(__DIR__.'/../src/Dflydev/ApacheMimeTypes/Resources/mime.types');
     }
 
     public function testCss()
