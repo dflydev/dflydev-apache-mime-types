@@ -1490,6 +1490,7 @@ text/x-fortran					f for f77 f90
 text/x-java-source				java
 text/x-opml					opml
 text/x-pascal					p pas
+text/x-php					php phtml php3 php4 php5 php7 phps
 text/x-nfo					nfo
 text/x-setext					etx
 text/x-sfv					sfv
